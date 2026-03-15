@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Aruna Agencies - Mannargudi</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --navy:#1B2A4A; --gold:#C8922A; --gold-light:#F0C060;
+  --cream:#FAF7F2; --white:#FFFFFF; --muted:#6B7A94;
+}
+body { font-family:'Noto Serif Tamil',serif; background:var(--cream); color:var(--navy); }
+
+/* HEADER */
+header {
+  background:var(--navy);
+  padding:50px 32px 54px;
+  text-align:center;
+  position:relative;
+}
+.badge {
+  position:absolute; top:38px; right:52px;
+  width:88px; height:88px;
+  background:var(--gold); border-radius:50%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  box-shadow:0 4px 24px rgba(200,146,42,0.55);
+  animation:glow 3s ease-in-out infinite;
+}
+@keyframes glow {
+  0%,100% { box-shadow:0 4px 20px rgba(200,146,42,0.45); }
+  50%      { box-shadow:0 4px 36px rgba(200,146,42,0.85); }
+}
+.badge .num { font-family:'Cormorant Garamond',serif; font-size:1.95rem; font-weight:700; color:white; line-height:1; }
+.badge .txt { font-size:7.5px; color:rgba(255,255,255,0.92); text-align:center; line-height:1.4; margin-top:3px; padding:0 5px; font-family:'Noto Serif Tamil',serif; }
+
+.shop-ta { font-size:2.55rem; font-weight:700; color:var(--gold-light); line-height:1.3; }
+.shop-en { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:600; color:rgba(255,255,255,0.38); margin-top:4px; letter-spacing:3px; }
+.shop-line { width:54px; height:3px; background:var(--gold); margin:16px auto; border-radius:2px; }
+.tagline-ta { font-size:1.15rem; color:rgba(255,255,255,0.68); }
+.tagline-en { font-family:'Cormorant Garamond',serif; font-size:0.78rem; color:rgba(255,255,255,0.28); letter-spacing:2px; text-transform:uppercase; margin-top:4px; }
+.header-address { font-family:'Noto Serif Tamil',serif; font-size:0.9rem; color:rgba(255,255,255,0.45); margin-top:12px; letter-spacing:0.5px; }
+
+/* PHONE STRIP */
+.phone-strip {
+  background:var(--gold);
+  display:flex; justify-content:center; align-items:center; gap:48px;
+  padding:15px 24px; flex-wrap:wrap;
+}
+.phone-strip a { color:white; text-decoration:none; font-size:1.2rem; font-weight:700; display:flex; align-items:center; gap:10px; }
+
+/* SHARED */
+.wrap { max-width:900px; margin:0 auto; padding:64px 24px; }
+.sec-label { text-align:center; margin-bottom:44px; }
+.sec-label h2 { font-size:1.85rem; font-weight:700; color:var(--navy); }
+.sec-label .sub { font-family:'Cormorant Garamond',serif; font-size:0.95rem; color:var(--muted); margin-top:4px; display:block; letter-spacing:1px; }
+.sec-label::after { content:''; display:block; width:44px; height:3px; background:var(--gold); margin:14px auto 0; border-radius:2px; }
+
+/* PRODUCTS GRID */
+.products-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.pcard {
+  background:var(--white); border-radius:16px;
+  padding:30px 14px 24px; text-align:center;
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 2px 12px rgba(27,42,74,0.07);
+  transition:transform 0.25s, box-shadow 0.25s;
+}
+.pcard:hover { transform:translateY(-6px); box-shadow:0 10px 28px rgba(27,42,74,0.12); }
+.pcard .ico {
+  font-size:2.8rem; margin-bottom:14px; display:block;
+  line-height:1;
+}
+.pcard .pta { font-size:1.02rem; font-weight:700; color:var(--navy); }
+.pcard .pen { font-family:'Cormorant Garamond',serif; font-size:0.8rem; color:var(--muted); margin-top:3px; display:block; }
+
+/* ABOUT */
+.about-box {
+  background:var(--navy); border-radius:24px;
+  padding:48px 42px; text-align:center;
+  max-width:680px; margin:0 auto;
+}
+.about-box h3 { font-size:1.6rem; color:var(--gold-light); font-weight:700; line-height:1.5; }
+.about-box .sub { font-family:'Cormorant Garamond',serif; font-size:0.88rem; color:rgba(255,255,255,0.28); margin-top:4px; display:block; }
+.about-box p { font-size:1.05rem; color:rgba(255,255,255,0.7); line-height:1.9; margin-top:20px; }
+.about-box .psub { font-family:'Cormorant Garamond',serif; font-size:0.83rem; color:rgba(255,255,255,0.28); display:block; margin-top:10px; line-height:1.7; }
+
+/* WHY US */
+.features-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+.fcard {
+  background:var(--white); border-radius:16px;
+  padding:26px 22px; display:flex; align-items:flex-start; gap:16px;
+  box-shadow:0 2px 12px rgba(27,42,74,0.07);
+}
+.fcard .icon-wrap {
+  width:52px; height:52px; flex-shrink:0;
+  background:#FFF5E0; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem;
+}
+.fcard h4 { font-size:1rem; font-weight:700; color:var(--navy); }
+.fcard .sub { font-family:'Cormorant Garamond',serif; font-size:0.78rem; color:var(--muted); display:block; margin-top:2px; }
+.fcard p { font-size:0.92rem; color:var(--muted); margin-top:6px; line-height:1.7; }
+
+/* CONTACT */
+.contact-section { background:var(--navy); padding:64px 24px; }
+.contact-section .sec-label h2 { color:var(--gold-light); }
+.contact-section .sec-label .sub { color:rgba(255,255,255,0.28); }
+.contact-section .sec-label::after { background:var(--gold); }
+.contact-cards { display:flex; gap:18px; justify-content:center; flex-wrap:wrap; max-width:820px; margin:0 auto; }
+.ccard {
+  background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px; padding:30px 26px; text-align:center; flex:1; min-width:200px;
+}
+.ccard .ico { font-size:2rem; margin-bottom:12px; display:block; }
+.ccard h4 { font-size:1.1rem; font-weight:700; color:var(--gold-light); }
+.ccard .sub { font-family:'Cormorant Garamond',serif; font-size:0.78rem; color:rgba(255,255,255,0.28); display:block; margin-bottom:12px; }
+.ccard p { font-size:1rem; color:rgba(255,255,255,0.75); line-height:1.9; }
+.ccard a { font-size:1rem; color:rgba(255,255,255,0.8); text-decoration:none; display:block; line-height:2; }
+.ccard a:hover { color:var(--gold-light); }
+
+footer { background:#0f1a2e; text-align:center; padding:28px 20px; color:rgba(255,255,255,0.35); font-size:0.88rem; line-height:2.2; }
+footer strong { color:var(--gold); }
+.rule { height:1px; background:rgba(27,42,74,0.1); max-width:820px; margin:0 auto; }
+
+@media(max-width:620px) {
+  .products-grid { grid-template-columns:repeat(2,1fr); }
+  .features-grid { grid-template-columns:1fr; }
+  .badge { width:70px; height:70px; top:14px; right:14px; }
+  .badge .num { font-size:1.5rem; }
+  .shop-ta { font-size:1.8rem; }
+  .about-box { padding:32px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="badge">
+    <span class="num">50+</span>
+    <span class="txt">ஆண்டு அனுபவம்</span>
+  </div>
+  <div class="shop-ta">ஸ்ரீ அருணா ஏஜென்சீஸ்</div>
+  <div class="shop-en">SRI ARUNA AGENCIES</div>
+  <div class="shop-line"></div>
+  <div class="tagline-ta">மோட்டார் · பம்ப் · மின்சாரப் பொருட்கள்</div>
+  <div class="tagline-en">Motors · Pumps · Electricals</div>
+  <div class="header-address">208 - காந்தி சாலை, மன்னார்குடி - 614 001</div>
+</header>
+
+<!-- PHONE STRIP -->
+<div class="phone-strip">
+  <a href="tel:9443476352">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    94434 76352
+  </a>
+  <a href="tel:9952256063">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    99522 56063
+  </a>
+</div>
+
+<!-- PRODUCTS -->
+<div class="wrap" id="products">
+  <div class="sec-label">
+    <h2>நாங்கள் விற்கும் பொருட்கள்</h2>
+    <span class="sub">What We Sell</span>
+  </div>
+  <div class="products-grid">
+    <div class="pcard">
+      <span class="ico">⚙️</span>
+      <div class="pta">மின் மோட்டார்கள்</div>
+      <span class="pen">Electric Motors</span>
+    </div>
+    <div class="pcard">
+      <span class="ico">💧</span>
+      <div class="pta">தண்ணீர் பம்புகள்</div>
+      <span class="pen">Water Pumps</span>
+    </div>
+    <div class="pcard">
+      <span class="ico">🔌</span>
+      <div class="pta">மின் கம்பிகள்</div>
+      <span class="pen">Electrical Wires</span>
+    </div>
+    <div class="pcard">
+      <span class="ico">🛢️</span>
+      <div class="pta">சப்மர்சிபிள் பம்ப்</div>
+      <span class="pen">Submersible Pump</span>
+    </div>
+    <div class="pcard">
+      <span class="ico">💡</span>
+      <div class="pta">சுவிட்ச் & போர்டுகள்</div>
+      <span class="pen">Switches & Boards</span>
+    </div>
+    <div class="pcard">
+      <span class="ico">🔧</span>
+      <div class="pta">உதிரி பாகங்கள்</div>
+      <span class="pen">Spare Parts</span>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- ABOUT -->
+<div class="wrap" style="padding-top:60px;padding-bottom:60px;">
+  <div class="about-box">
+    <h3>மன்னார்குடியில் 50 ஆண்டுகளுக்கும் மேலாக நம்பகமான கடை</h3>
+    <span class="sub">Trusted Shop in Mannargudi for 50+ Years</span>
+    <p>நாங்கள் தரமான மோட்டார், பம்ப் மற்றும் மின்சாரப் பொருட்களை நியாயமான விலையில் வழங்குகிறோம். விவசாயம், வீடு மற்றும் தொழிற்சாலைக்கு தேவையான அனைத்து பொருட்களும் இங்கே கிடைக்கும்.</p>
+    <span class="psub">We provide quality motors, pumps and electrical products at fair prices. All items for agriculture, home and industry are available here.</span>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- WHY US -->
+<div class="wrap" id="why">
+  <div class="sec-label">
+    <h2>ஏன் நம்மை தேர்வு செய்யலாம்?</h2>
+    <span class="sub">Why Choose Us?</span>
+  </div>
+  <div class="features-grid">
+    <div class="fcard">
+      <div class="icon-wrap">🏆</div>
+      <div>
+        <h4>தரமான பொருட்கள்</h4>
+        <span class="sub">Quality Products</span>
+        <p>நம்பகமான பிராண்டுகளின் பொருட்களை மட்டுமே விற்கிறோம்.</p>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="icon-wrap">🏷️</div>
+      <div>
+        <h4>நியாயமான விலை</h4>
+        <span class="sub">Fair Price</span>
+        <p>எல்லா பொருட்களும் சரியான விலையில். எந்த மோசடியும் இல்லை.</p>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="icon-wrap">🕐</div>
+      <div>
+        <h4>50+ ஆண்டு அனுபவம்</h4>
+        <span class="sub">50+ Years Experience</span>
+        <p>பல தலைமுறைகளாக மன்னார்குடி மக்களுக்கு சேவை செய்கிறோம்.</p>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="icon-wrap">🤝</div>
+      <div>
+        <h4>உடனடி உதவி</h4>
+        <span class="sub">Quick Help</span>
+        <p>எப்போது வேண்டுமானாலும் அழைக்கவும். சரியான பொருளை தேர்வு செய்ய உதவுவோம்.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="sec-label" style="max-width:820px;margin:0 auto 44px;">
+    <h2>எங்களை தொடர்பு கொள்ளுங்கள்</h2>
+    <span class="sub">Contact Us</span>
+  </div>
+  <div class="contact-cards">
+    <div class="ccard">
+      <span class="ico">📍</span>
+      <h4>முகவரி</h4>
+      <span class="sub">Address</span>
+      <p>208 - காந்தி சாலை<br>மன்னார்குடி - 614 001<br>தமிழ் நாடு</p>
+    </div>
+    <div class="ccard">
+      <span class="ico">📞</span>
+      <h4>தொலைபேசி</h4>
+      <span class="sub">Phone</span>
+      <a href="tel:9443476352">94434 76352</a>
+      <a href="tel:9952256063">99522 56063</a>
+    </div>
+    <div class="ccard">
+      <span class="ico">🕐</span>
+      <h4>கடை நேரம்</h4>
+      <span class="sub">Shop Hours</span>
+      <p>திங்கள் – சனி<br>காலை 9 – இரவு 8<br>ஞாயிறு : காலை 9 – மாலை 4</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>ஸ்ரீ அருணா ஏஜென்சீஸ்</strong> &nbsp;|&nbsp; Sri Aruna Agencies<br>
+  208 - காந்தி சாலை, மன்னார்குடி - 614 001<br>
+  94434 76352 &nbsp;|&nbsp; 99522 56063
+</footer>
+
+</body>
+</html>
